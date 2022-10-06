@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-node-app
+spec:
+  selector:
+    app: second-node-app # template name.
+  ports:
+    - protocol: 'TCP'
+      port: 80  # Port from our local computer.
+      targetPort: 3000  # Port from the node app.
+  type: LoadBalancer
