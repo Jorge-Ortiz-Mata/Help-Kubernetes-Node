@@ -4,11 +4,16 @@ metadata:
   name: second-node-app-deployment
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: second-node-app
+      tier: backend
   template:
     metadata:
       labels:
         app: second-node-app
+        tier: backend
     spec:
       containers:
         - name: second-node-container
-          image:
+          image: jorge107/second-node-image:v1
