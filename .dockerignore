@@ -1,2 +1,4 @@
 /node_modules
 deployment.yaml
+service.yaml
+master.yaml

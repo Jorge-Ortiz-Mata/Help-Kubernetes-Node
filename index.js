@@ -3,7 +3,11 @@ const app = express();
 const port = 3000;
 
 app.get('/', (req, res) => {
-  res.send("I'm Jorge and I'm learning about Kubernetes and it's awesome!");
+  res.send(`
+    <h1>Welcome!</h1>
+    <h3>Kubernetes Course</h3>
+    <p>I'm currently learning Kubernetes and it is awesome.</p>
+  `);
 });
 
 app.listen(port, () => {

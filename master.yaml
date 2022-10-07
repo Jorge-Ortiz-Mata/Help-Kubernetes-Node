@@ -34,3 +34,9 @@ spec:
       containers:
         - name: second-node-container
           image: jorge107/second-node-image:v1
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 3000
+            periodSeconds: 10
+            initialDelaySeconds: 5
