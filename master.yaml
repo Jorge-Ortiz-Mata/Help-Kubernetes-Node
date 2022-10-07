@@ -2,6 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: service-node-app
+  labels:
+    group: example
 spec:
   selector:
     app: second-node-app # template name.
@@ -15,6 +17,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: second-node-app-deployment
+  labels:
+    group: example
 spec:
   replicas: 1
   selector:

@@ -8,6 +8,8 @@ spec:
     matchLabels:
       app: second-node-app
       tier: backend
+    # matchExpressions:
+    #   - { key: app, operator: In, values: [second-node-app, first-node-app] }
   template:
     metadata:
       labels:
